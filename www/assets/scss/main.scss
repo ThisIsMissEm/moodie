@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Hoodie Sign In / Sign Up / Sign out stylings
+   ========================================================================== */
+
+@import './_bootstrap';
+
+$green-dark: #759E24;
+$green-light: #88B72A;
+$blue-dark: #287AB8;
+$blue-light: #2C85C9;
+$white: #FFFFFF;
+$text: #222222;
+
+.hoodie-account-signedin,
+.hoodie-account-signedout,
+.hoodie-account-error {
+  display: none;
+}
+
+html {
+  &[data-hoodie-account-status=signedin] .hoodie-account-signedin,
+  &[data-hoodie-account-status=error] .hoodie-account-error,
+  &[data-hoodie-account-status=signedout] .hoodie-account-signedout {
+    display: block;
+  }
+}
+
+.hoodie-accountbar {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+body {
+  background: $green-dark;
+}
+
+.navbar {
+  background: $white;
+  text-align: center;
+
+  .navbar-nav,
+  li {
+    float: none;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      color: $green-dark;
+    }
+  }
+}
